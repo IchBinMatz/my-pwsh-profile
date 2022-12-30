@@ -1,0 +1,18 @@
+- npm:
+  exe: "npm"
+  module: "npm-completion"
+- cargo:
+  exe: "cargo"
+  module: "posh-cargo"
+- git:
+  exe: "git"
+  module: "posh-git"
+- rustup:
+  exe: "rustup"
+  command: "completions powershell"
+- deno:
+  exe: "deno"
+  command: "completions powershell"
+- ohmyposh:
+  exe: "oh-my-posh"
+  command: "completion powershell"
