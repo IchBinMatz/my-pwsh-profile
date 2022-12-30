@@ -28,9 +28,11 @@ $softwares | Foreach-Object -ThrottleLimit 5 -Parallel {
     & $PSItem["exe"] @args > $filePath
   }
 }
+Get-ChildItem .\completions\ *.ps1 | Copy-Item -Destination $CompletionsPath
 Get-ChildItem $CompletionsPath *.ps1 | Foreach-Object  {
   $fileName = $_.Name
   ". $CompletionsPath$fileName" >> $PROFILE
 }
 Get-Content profile.ps1 >> $PROFILE
+echo "Finished Writing to Profile:"
 echo $PROFILE
